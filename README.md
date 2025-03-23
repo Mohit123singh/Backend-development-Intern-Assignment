@@ -33,8 +33,7 @@ It supports basic CRUD (Create, Read, Update, Delete) operations with proper err
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/user-crud-api.git
-cd user-crud-api
+git clone git@github.com:Mohit123singh/Backend-development-Intern-Assignment.git
 ```
 
 2. **Install dependencies:**
@@ -192,11 +191,11 @@ Content-Type: application/json
 DELETE /users/67e061343fff4df19972f78b
 ```
 
-**Response:**
+**Response: (Id of deleted-user)**
 
 ```json
 {
-  "67e061343fff4df19972f78b" // Id of deleted-user
+  "67e061343fff4df19972f78b" 
 }
 ```
 
@@ -238,6 +237,6 @@ DELETE /users/67e061343fff4df19972f78b
 
 ## 📢 Notes:
 
-- You can use either **MongoDB** or switch to an **in-memory array** for storing users temporarily.
+
 - All responses are in JSON format.
 - Proper error handling is implemented for each route.
