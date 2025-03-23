@@ -1,7 +1,7 @@
 
 # User CRUD API
 
-This is a simple RESTful API built using **Node.js**, **Express**, and **MongoDB** (or an in-memory array) to manage users.  
+This is a simple RESTful API built using **Node.js**, **Express**, and **MongoDB**  
 It supports basic CRUD (Create, Read, Update, Delete) operations with proper error handling and JSON responses.
 
 ---
@@ -70,11 +70,11 @@ http://localhost:5000
 
 | Method | Endpoint           | Description                       | Request Body (JSON)                          |
 |-------|--------------------|-----------------------------------|---------------------------------------------|
-| POST  | `/users`            | Create a new user                 | `{ "name": "Mohit Sngh", "email": "mohit@mail.com", "age": 24 }` |
-| GET   | `/users`            | Retrieve all users                | None                                        |
-| GET   | `/users/:id`        | Retrieve a single user by ID      | None                                        |
-| PUT   | `/users/:id`        | Update a user by ID               | `{ "name": "Updated Name", "age": 30 }`     |
-| DELETE| `/users/:id`        | Delete a user by ID               | None                                        |
+| POST  | `/api/users`            | Create a new user                 | `{ "name": "Mohit Sngh", "email": "mohit@mail.com", "age": 24 }` |
+| GET   | `/api/users`            | Retrieve all users                | None                                        |
+| GET   | `/api/users/:id`        | Retrieve a single user by ID      | None                                        |
+| PUT   | `api//users/:id`        | Update a user by ID               | `{ "name": "Updated Name", "age": 30 }`     |
+| DELETE| `api/users/:id`        | Delete a user by ID               | None                                        |
 
 ---
 
