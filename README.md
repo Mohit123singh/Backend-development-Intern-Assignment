@@ -55,7 +55,7 @@ MONGO_URI=your_mongodb_connection_string
 4. **Run the server:**
 
 ```bash
-npm start
+npm run dev
 ```
 
 The server will run at:
