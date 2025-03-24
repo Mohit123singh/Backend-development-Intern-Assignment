@@ -1,6 +1,6 @@
 const asyncHandler=require('express-async-handler')
 const User=require('../models/userModel.js');
-
+const mongoose=require('mongoose');
 // @desc Create new user
 // @route POST/api/users
 
@@ -57,6 +57,11 @@ const getAllUsers=asyncHandler(async(req,res)=>{
 
 
 const getUser=asyncHandler(async(req,res)=>{
+
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+        res.status(400);
+        throw new Error('Invalid ID format')
+    }
     const user=await User.findById(req.params.id)
     if(!user){
         res.status(400)
@@ -71,6 +76,10 @@ const getUser=asyncHandler(async(req,res)=>{
 
 
 const updateUser=asyncHandler(async(req,res)=>{
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+        res.status(400);
+        throw new Error('Invalid ID format')
+    }
 
     const user=await User.findById(req.params.id);
 
@@ -93,6 +102,10 @@ const updateUser=asyncHandler(async(req,res)=>{
 
 const deleteUser=asyncHandler(async(req,res)=>{
 
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+        res.status(400);
+        throw new Error('Invalid ID format')
+    }
     const user=await User.findById(req.params.id);
 
     // check for the user
